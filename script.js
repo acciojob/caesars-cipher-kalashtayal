@@ -13,6 +13,12 @@ const lookup = {
 function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
+	const rot13 = encodedStr => encodedStr.split('')
+    .map(char => String.fromCharCode(char.charCodeAt(0) + (char.toUpperCase() < 'N' ? 13 : -13)))
+    .join('');
+
+	let decodedArr= Array.from(rot13);
+
 
   return ;//return decodedArr
 }
